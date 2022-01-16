@@ -1,0 +1,205 @@
+@font-face {
+    font-family:"Barlow";
+    src: url(/cvportfolio-assets/cvportfolio-fonts/Barlow-Black-900.ttf);
+    font-weight: 900;
+}
+
+@font-face {
+    font-family:"Barlow";
+    src: url(/cvportfolio-assets/cvportfolio-fonts/Barlow-SemiBold-600.ttf);
+    font-weight: 600;
+}
+
+@font-face {
+    font-family:"Barlow";
+    src: url(/cvportfolio-assets/cvportfolio-fonts/Barlow-Light-300.ttf);
+    font-weight: 300;
+}
+
+:root {
+    --white:#fff;
+    --gold:#ca9c37;
+    --turquoise:#0d8dad;
+    --berry:#8D284E;
+    font-size: 10px;
+}
+
+*,
+*::after,
+::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Barlow;
+    color: var(--white);
+    line-height: 3rem;
+}
+
+a {
+    text-decoration: none;
+    color: var(--white);
+    text-decoration: underline;
+    font-weight: 300;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: var(--berry);
+    height: 12vh;
+    text-align: left;
+    color: var(--white);
+    padding-left: 20px;
+}
+
+header h1 {
+    font-weight: 600;
+    font-size: 3.5rem;
+    line-height: 3rem;
+}
+
+header p {
+    font-weight: 300;
+    font-size: 2rem;
+}
+
+main {
+    background: linear-gradient(180deg, var(--turquoise), var(--berry));
+    height: 76vh;
+    display: flex;
+    justify-content:flex-start;
+    /* align-items: flex-start; */
+    overflow-y:auto;
+    overflow-x: hidden;
+}
+
+img {
+    transform: translate(0px, -15%);
+
+}
+
+.about-section,
+.skills-section,
+.contact-section {
+    text-align: left;
+    max-width: 360px;
+}
+
+.about-section h1,
+.skills-section h1,
+.contact-section h1 {
+    font-weight: 600;
+    font-size: 3rem;
+    padding: 0px 20px 20px 20px;
+    transform: translate(0px, -40px);
+}
+
+.about-section p {
+    font-size: 2rem;
+    font-weight: 300;
+    padding: 0px 20px 20px 20px;
+    transform: translate(0px, -40px);
+}
+
+.skills-section p,
+.contact-section p {
+    font-size: 2rem;
+    font-weight: 300;
+    padding: 20px 20px 20px 20px;
+}
+
+.skill-list-one li:nth-child(6),
+.skill-list-two li:nth-child(4) {
+    padding-bottom: 20px;
+}
+
+input,
+button {
+    margin-left:20px;
+}
+
+/* SKILLS PAGE */
+
+li {
+    list-style: none;
+    font-size: 2rem;
+    font-weight: 300;
+    padding: 0px 0px 0px 20px;
+    /* border: red 2px solid; */
+}
+
+.skill-header {
+    font-weight: 600;
+}
+
+.skill-list-one,
+.skill-list-two {
+    padding-left: 10px;
+}
+
+/* FOOTER SECTION */
+footer {
+    display: flex;
+    align-items: center;
+    height: 12vh;
+    background-color: var(--berry);
+}
+
+menu {
+    display: flex;
+    flex-direction: row;
+    padding-left: 20px; 
+}
+
+menu p {
+    padding-right: 40px; 
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--white);
+}
+
+/* INTERACTIVE ELEMENTS */
+section > article {
+    display:none; /* this hides the content on each article */
+}
+
+section > input[type="radio"]:checked + article {
+    display:block; /* this shows the content on each article when the checkbox is selected */
+}
+
+/* BUTTON */
+.submit-button {
+    margin-top: 20px;
+    width: 100px;
+    height: 30px;
+    font-family: Barlow;
+    font-weight: 600;
+    font-size: 1.75rem;
+    background-color: var(--white);
+    color: var(--berry);
+    border: none;
+    border-radius:10px;
+}
+
+/* HOW DO I GET THE PLACEHOLDER TEXT TO SIT AT THE TOP OF THE TEXT BOX */
+.text-input-area {
+    width: 300px;
+    height: 40px;
+    font-family: Barlow;
+    font-weight: 600;
+    font-size: 1.75rem;
+    background-color: var(--white);
+    color: var(--berry);
+    border: none;
+    border-radius:10px;
+    padding: 10px;
+    transition: height .5s;
+}
+
+.text-input-area:focus {
+    height: 200px;
+}
