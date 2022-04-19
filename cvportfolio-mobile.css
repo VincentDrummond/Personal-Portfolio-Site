@@ -117,7 +117,7 @@ img {
     padding-bottom: 20px;
 }
 
-input,
+textarea,
 button {
     margin-left:20px;
 }
@@ -175,17 +175,16 @@ section > input[type="radio"]:checked + article {
 .submit-button {
     margin-top: 20px;
     width: 100px;
-    height: 30px;
+    height: 40px;
     font-family: Barlow;
     font-weight: 600;
     font-size: 1.75rem;
     background-color: var(--white);
     color: var(--berry);
     border: none;
-    border-radius:10px;
+    border-radius:7px;
 }
 
-/* HOW DO I GET THE PLACEHOLDER TEXT TO SIT AT THE TOP OF THE TEXT BOX */
 .text-input-area {
     width: 300px;
     height: 40px;
@@ -195,9 +194,10 @@ section > input[type="radio"]:checked + article {
     background-color: var(--white);
     color: var(--berry);
     border: none;
-    border-radius:10px;
+    border-radius:7px;
     padding: 10px;
-    transition: height .5s;
+    transition: height .5s ease-in;
+    resize: none;
 }
 
 .text-input-area:focus {
